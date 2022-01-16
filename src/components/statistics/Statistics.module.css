@@ -12,7 +12,7 @@
 }
 .statistics hr {
   width: 5.5rem;
-  margin: 1.3rem auto 1rem;
+  margin: 1.5rem auto 1rem;
   border: none;
   border-bottom: 1px solid #ccc;
 }
@@ -21,7 +21,7 @@
 }
 .progress-bar {
   margin-top: 1.5rem;
-  height: .8rem;
+  height: .7rem;
   background-color: #eee;
   border-radius: 8px;
 }
