@@ -1,7 +1,7 @@
 .intro {
   background-color: var(--clr-white);
   text-align: center;
-  transform: translateY(-3rem);
+  transform: translateY(-3.5rem);
   padding: 0 1.3rem 2rem;
   box-sizing: border-box;
 }
@@ -10,7 +10,7 @@
 }
 .intro p {
   margin-top: 1.2rem;
-  font-size: 15px;
+  font-size: var(--text-p);
   font-weight: 500;
   color: var(--clr-d-gray);
 }

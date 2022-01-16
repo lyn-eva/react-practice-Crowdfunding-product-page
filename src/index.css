@@ -6,6 +6,7 @@
   --clr-black: hsl(0, 0%, 0%);
   --clr-white: #fff;
   --clr-d-gray: hsl(0, 0%, 48%);
+  --text-p: 15px;
 }
 * {
   margin: 0;

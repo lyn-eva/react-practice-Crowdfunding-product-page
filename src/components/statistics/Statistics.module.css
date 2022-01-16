@@ -1,0 +1,33 @@
+.statistics {
+  background-color: var(--clr-white);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  transform: translateY(-1.5rem);
+}
+.statistic p{
+  margin-top: .4rem;
+  color: var(--clr-d-gray);
+  font-size: var(--text-p);
+}
+.statistics hr {
+  width: 5.5rem;
+  margin: 1.3rem auto 1rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.statistics h2 {
+  font-size: 2rem;
+}
+.progress-bar {
+  margin-top: 1.5rem;
+  height: .8rem;
+  background-color: #eee;
+  border-radius: 8px;
+}
+.progress {
+  background-color: var(--clr-moderate-cyan);
+  height: 100%;
+  width: 80.9%;
+  border-radius: inherit;
+}
