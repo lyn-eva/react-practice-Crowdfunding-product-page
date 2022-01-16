@@ -15,7 +15,7 @@
   background-color: #fff;
   top: 3rem;
   left: 0;
-  width: 100%;
+  width: 100% !important; /*first time*/
   opacity: 0;
   transform-origin: center top;
   transform: scaleY(0);

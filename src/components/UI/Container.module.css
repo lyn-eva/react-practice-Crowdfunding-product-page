@@ -1,4 +1,6 @@
 .container {
   width: clamp(200px, 90%, 1200px);
   margin: 0 auto;
+  border-radius: .6rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .2);
 }

@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Commissioner:400,500,700);
 
+:root {
+  --clr-moderate-cyan: hsl(176, 50%, 47%);
+  --clr-d-cyan: hsl(176, 72%, 28%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-white: #fff;
+  --clr-d-gray: hsl(0, 0%, 48%);
+}
 * {
   margin: 0;
   font-family: 'Commissioner', sans-serif;

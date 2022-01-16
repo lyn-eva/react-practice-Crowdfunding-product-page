@@ -1,0 +1,26 @@
+.intro {
+  background-color: var(--clr-white);
+  text-align: center;
+  transform: translateY(-3rem);
+  padding: 0 1.3rem 2rem;
+  box-sizing: border-box;
+}
+.logo {
+  transform: translateY(-1.8rem);
+}
+.intro p {
+  margin-top: 1.2rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--clr-d-gray);
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+button {
+  border: none;
+  border-radius: 2rem;
+  background-color: transparent;
+}
