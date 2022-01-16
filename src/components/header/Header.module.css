@@ -2,7 +2,6 @@
   background: url("../../assests/image-hero-mobile.jpg") no-repeat;
   background-size: 100% auto;
   height: 0;
-  outline: 1px solid red;
   padding-bottom: calc(80% - 1.5rem);
   padding-top: 1.5rem;
 }
@@ -36,7 +35,7 @@
 .drop-menu a:hover, #action-btn:hover {
   cursor: pointer;
 }
-nav:focus-within .drop-menu {
+.menu-dropped .drop-menu {
   opacity: 1;
   transform: scaleY(1);
   pointer-events: auto;
