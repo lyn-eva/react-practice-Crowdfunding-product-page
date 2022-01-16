@@ -4,20 +4,23 @@
   border-radius: .5rem;
   box-shadow: 0 0 3px #aaa;
 }
+.card:not(:first-of-type) {
+  margin-top: 1rem;
+}
 .header p {
   color: var(--clr-moderate-cyan);
   font-weight: 500;
   margin-top: .4rem;
 }
 .card > p {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 1.3rem;
   color: var(--clr-d-gray);
   line-height: 1.5;
   font-size: var(--text-p);
 }
 .amount {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--clr-black);
   vertical-align: middle;
   margin-right: 6px;
