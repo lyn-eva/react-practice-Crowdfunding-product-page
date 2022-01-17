@@ -16,7 +16,7 @@
   font-size: 1.1rem;
 }
 .context > p {
-  margin: 1.4rem 0 1.3rem;
+  margin-top: 1.4rem;
   color: var(--clr-d-gray);
   line-height: 1.5;
   font-size: var(--text-p);
@@ -58,6 +58,13 @@
 .pledge-card .amount span {
   font-size: 1.1rem;
   vertical-align: initial;
+}
+.pledge-card .logic {
+  /* display: none; */
+}
+.pledge-card hr {
+  margin: 1.3rem 0 0 -1.7rem;
+  width: calc(3.4rem + 100%);
 }
 .pledge-card input[type="number"], .pledge-card .reward-btn {
   width: 6rem;

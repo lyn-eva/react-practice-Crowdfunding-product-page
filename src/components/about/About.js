@@ -19,7 +19,7 @@ function About() {
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
-        <ul className={styles["pledge-section"]}>
+        <ul>
           <PriceCard
             itemName="Bamboo Stand"
             restriction="Pledge $25 or more"

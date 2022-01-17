@@ -1,0 +1,29 @@
+.pledgeOptionsModal {
+  position: absolute;
+  background-color: var(--clr-white);
+  width: 90%;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 1.8rem;
+  box-sizing: border-box;
+}
+.context h2 {
+  font-size: 1.3rem;
+}
+.context > p {
+  font-size: var(--text-p);
+  margin-top: 1.5rem;
+  color: var(--clr-d-gray);
+}
+.context {
+  position: relative;
+  
+}
+#close {
+  filter: brightness(.4) grayscale(1);
+  position: absolute;
+  top: 10px;
+  right: 0;
+}

@@ -2,7 +2,7 @@ import styles from "./PriceCard.module.css";
 import Button from "./Button";
 
 function PriceCard(props) {
-  return <li className={`${styles.card} ${props.className || ''}`}>
+  return <li className={`${styles.card} ${styles[props.className] || ''}`}>
     <div className={styles.detail}>
       {props.className &&<input type="radio" name="slect" value='sus' checked/>}
       <div className={styles.context}>
@@ -14,8 +14,8 @@ function PriceCard(props) {
         <p className={styles.amount}><span>{props.amount}</span> left</p>
       </div>
     </div>
-    {props.className && <hr />}
     <div className={styles.logic}>
+      {props.className && <hr />}
       <form>
         {props.className && <label>Enter your pledge</label>}
         {props.className && <input type="number" placeholder='$0.00'/>}
