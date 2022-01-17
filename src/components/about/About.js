@@ -19,7 +19,7 @@ function About() {
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
-        <div className={styles["pledge-section"]}>
+        <ul className={styles["pledge-section"]}>
           <PriceCard
             itemName="Bamboo Stand"
             restriction="Pledge $25 or more"
@@ -38,7 +38,7 @@ function About() {
             descr="You get two Special Edition Mahogany stands, a Backer T0Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included"
             amount="0"
           />          
-        </div>
+        </ul>
       </Container>
     </section>
   );

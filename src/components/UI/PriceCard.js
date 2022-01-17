@@ -2,15 +2,27 @@ import styles from "./PriceCard.module.css";
 import Button from "./Button";
 
 function PriceCard(props) {
-  return <div className={styles.card}>
-    <div className={styles.header}>
-      <h3>{props.itemName}</h3>
-      <p>{props.restriction}</p>
+  return <li className={`${styles.card} ${props.className || ''}`}>
+    <div className={styles.detail}>
+      {props.className &&<input type="radio" name="slect" value='sus' checked/>}
+      <div className={styles.context}>
+        <div className={styles.header}>
+          <h3>{props.itemName}</h3>
+          <p>{props.restriction}</p>
+        </div>
+        <p>{props.descr}</p>
+        <p className={styles.amount}><span>{props.amount}</span> left</p>
+      </div>
     </div>
-    <p>{props.descr}</p>
-    <p><span className={styles.amount}>{props.amount}</span> left</p>
-    <Button type="button">Select Reward</Button>
-  </div>;
+    {props.className && <hr />}
+    <div className={styles.logic}>
+      <form>
+        {props.className && <label>Enter your pledge</label>}
+        {props.className && <input type="number" placeholder='$0.00'/>}
+      <Button type='submit' className={styles['reward-btn']}>Continue</Button>
+      </form>
+    </div>
+  </li>;
 }
 
 export default PriceCard;

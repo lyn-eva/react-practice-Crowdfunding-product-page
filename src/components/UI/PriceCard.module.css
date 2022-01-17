@@ -1,27 +1,91 @@
 .card {
   margin-top: 1.5rem;
-  padding: 1.5rem;
   border-radius: .5rem;
   box-shadow: 0 0 3px #aaa;
+  padding: 1.7rem;
 }
 .card:not(:first-of-type) {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .header p {
   color: var(--clr-moderate-cyan);
   font-weight: 500;
   margin-top: .4rem;
 }
-.card > p {
-  margin: 1.5rem 0 1.3rem;
+.header h3 {
+  font-size: 1.1rem;
+}
+.context > p {
+  margin: 1.4rem 0 1.3rem;
   color: var(--clr-d-gray);
   line-height: 1.5;
   font-size: var(--text-p);
 }
-.amount {
+.amount span{
   font-weight: 700;
   font-size: 2.2rem;
   color: var(--clr-black);
   vertical-align: middle;
-  margin-right: 6px;
+  margin-right: 5px;
+}
+.pledge-card .detail {
+  display: flex;
+}
+.pledge-card input[type="radio"] {
+  display: block;
+  margin: 1rem 2rem 0 0;
+  min-width: 1.5rem;
+  height: 1.5rem;
+}
+.pledge-card .header {
+  display: flex;
+  /* outline: 1px solid red; */
+}
+.pledge-card .header p {
+  margin: 1px 0 0 1.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.pledge-card .context {
+  position: relative;
+}
+.pledge-card .amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+.pledge-card .amount span {
+  font-size: 1.1rem;
+  vertical-align: initial;
+}
+.pledge-card input[type="number"], .pledge-card .reward-btn {
+  width: 6rem;
+  padding: .7rem 0;
+}
+.pledge-card form {
+  display: flex;
+  align-items: center;
+  padding-top: 1.3rem;
+}
+.pledge-card label {
+  color: var(--clr-d-gray);
+  font-weight: 500;
+  font-size: 14px;
+}
+.pledge-card input[type="number"] {
+  border-radius: 2rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  margin: 0 1rem 0 auto;
+  border: 2px solid var(--clr-d-gray);
+}
+.pledge-card input[type="number"]:focus {
+  outline-color: var(--clr-moderate-cyan);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

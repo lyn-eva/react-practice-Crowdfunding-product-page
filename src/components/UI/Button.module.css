@@ -6,8 +6,8 @@
   font-size: 1rem;
   color: var(--clr-white);
   width: 75%;
-  max-width: 250px;
-  padding: 1.1rem 0;
+  max-width: 220px;
+  padding: 1rem 0;
   transition: 300ms;
 }
 

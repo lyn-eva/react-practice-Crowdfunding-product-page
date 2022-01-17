@@ -5,6 +5,8 @@ import Header from './components/header/Header';
 import Intro from './components/intro/Intro';
 import Statistics from './components/statistics/Statistics';
 import About from './components/about/About';
+import Backdrop from './components/modal/Backdrop';
+import Modal from './components/modal/Modal';
 
 function App() {
   return <>
@@ -12,6 +14,8 @@ function App() {
     <Intro />
     <Statistics />
     <About />
+    {/* <Backdrop /> */}
+    {/* <Modal /> */}
   </>
 }
 
