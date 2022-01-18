@@ -1,7 +1,18 @@
+import { useState, useContext } from "react";
 import styles from "./PriceCard.module.css";
 import Button from "./Button";
-
+import Context from "../store/Context";
 function PriceCard(props) {
+  const ctx = useContext(Context)
+
+  const submitHandler = e => {
+    e.preventDefault();
+    if (props.onConfirm) {//
+      props.onConfirm();
+      ctx.modalHandler();
+    }
+  }
+
   return (
     <li className={`${styles.card} ${styles[props.className] || ''}`}>
       <div className={styles.detail}>
@@ -23,7 +34,7 @@ function PriceCard(props) {
       </div>
       <div className={styles.logic}>
         <hr />
-        <form>
+        <form onSubmit={submitHandler}>
           <label>Enter your pledge</label>
           <div className={styles["form-action"]}>
             <input type="number" placeholder="$0.00" />
@@ -32,7 +43,7 @@ function PriceCard(props) {
             </Button>
           </div>
         </form>
-      </div>
+      </div>    
     </li>
   );
 }

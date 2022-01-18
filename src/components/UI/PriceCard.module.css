@@ -1,6 +1,6 @@
 .card {
   margin-top: 1.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 0 0 3px #aaa;
   padding: 1.7rem;
 }
@@ -15,7 +15,7 @@
 }
 input[type="radio"] {
   display: block;
-  margin: .2rem 2rem 0 0;
+  margin: 0.2rem 2rem 0 0;
   min-width: 1.5rem;
   height: 1.5rem;
   position: absolute;
@@ -26,7 +26,7 @@ input[type="radio"] {
 .header p {
   color: var(--clr-moderate-cyan);
   font-weight: 500;
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 .header h3 {
   font-size: 1.1rem;
@@ -37,34 +37,45 @@ input[type="radio"] {
   line-height: 1.5;
   font-size: var(--text-p);
 }
-.amount span{
+.amount span {
   font-weight: 700;
   font-size: 2.2rem;
   color: var(--clr-black);
   vertical-align: middle;
   margin-right: 5px;
 }
-.detail {/**/
+.detail {
+  /**/
   display: flex;
 }
-.logic hr, .logic label, .logic input, .modalView .reward-btn {
+.logic hr,
+.logic label,
+.logic input,
+.modalView .reward-btn {
   display: none;
 }
-.card:focus-within .logic { /*outstanding move*/
-  display: block;
+.card.modalView:focus-within hr,
+.card.modalView:focus-within label,
+.card.modalView:focus-within input,
+.card.modalView:focus-within .reward-btn
+{
+  display: block; /*@__@*/
 }
-hr {/**/
+hr {
+  /**/
   margin: 1.3rem 0 0 -1.7rem;
   width: calc(3.4rem + 100%);
 }
 .logic .reward-btn {
   width: 100%;
 }
-input[type="number"], .modalView .reward-btn {
-  width: 6rem;/**/
-  padding: .7rem 0;
+input[type="number"],
+.modalView .reward-btn {
+  width: 6rem; /**/
+  padding: 0.7rem 0;
 }
-.logic form {/**/
+.logic form {
+  /**/
   display: flex;
   align-items: flex-start;
   margin-top: 1.3rem;
@@ -77,7 +88,8 @@ input[type="number"], .modalView .reward-btn {
   display: flex;
   gap: 1rem;
 }
-.logic label {/**/
+.logic label {
+  /**/
   color: var(--clr-d-gray);
   font-weight: 500;
   font-size: 14px;
@@ -90,29 +102,32 @@ input[type="number"], .modalView .reward-btn {
   width: 100%;
   justify-content: space-between;
 }
-input[type="number"] {/**/
+input[type="number"] {
+  /**/
   border-radius: 2rem;
   font-size: 1rem;
   box-sizing: border-box;
   padding-left: 1rem;
   border: 2px solid var(--clr-d-gray);
 }
-input[type="number"]:focus {/**/
+input[type="number"]:focus {
+  /**/
   outline-color: var(--clr-moderate-cyan);
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 @media (min-width: 666px) {
-  .modalView input[type='radio'] {
+  .modalView input[type="radio"] {
     position: static;
   }
-  .header {/**/
+  .header {
+    /**/
     display: flex;
-    
-  }.header p {
+  }
+  .header p {
     margin: 1px 0 0 auto;
   }
 
@@ -123,23 +138,26 @@ input[type=number]::-webkit-outer-spin-button {
     width: 6rem;
   }
   .modalView .header {
-    margin-left: 0; 
+    margin-left: 0;
   }
   .modalView .header p {
     margin-left: 1rem;
     font-weight: 700;
     font-size: 1rem;
   }
-  .detail {/**/
+  .detail {
+    /**/
     position: relative;
   }
-  .modalView .context .amount {/**/
+  .modalView .context .amount {
+    /**/
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
   }
-  .modalView .amount span {/**/
+  .modalView .amount span {
+    /**/
     font-size: 1.1rem;
     vertical-align: initial;
   }

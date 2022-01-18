@@ -7,6 +7,7 @@ import Backdrop from "./Backdrop";
 import PriceCard from "../UI/PriceCard";
 
 function PledgeOptionsModal(props) {
+
   return (
     <>
       {createPortal(
@@ -27,12 +28,14 @@ function PledgeOptionsModal(props) {
           </div>
           <ul>
             <PriceCard
+              onConfirm={props.onClick}
               className="modalView"
               enableRadio={true}
               itemName="Pledge with no reward"
               descr="Choose to support us without a reward if you simply believe in our project.As a backer, you will be signed up to receive product updates via email."
               />
             <PriceCard
+              onConfirm={props.onClick}
               className="modalView"
               enableRadio={true}
               itemName="Bamboo Stand"
@@ -41,6 +44,7 @@ function PledgeOptionsModal(props) {
               amount="101"
               />
             <PriceCard
+              onConfirm={props.onClick}
               className="modalView"
               enableRadio={true}
               itemName="Black Edition Stand"
@@ -49,13 +53,14 @@ function PledgeOptionsModal(props) {
               amount="64"
               />
             <PriceCard
+              onConfirm={props.onClick}
               className="modalView"
               enableRadio={true}
               itemName="Mahogany Special Edition"
               restriction="Pledge $200 or more"
               descr="You get two Special Edition Mahogany stands, a Backer T0Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included"
               amount="0"
-            />
+              />
           </ul>
         </Container>,
         document.getElementById("modal")
