@@ -19,12 +19,12 @@ function Header() {
       <Container className={styles['nav-bar']}>
         <div><img src={logo} alt="crowdfund"/></div>
         <nav className={menuDropped ? styles['menu-dropped'] : ''}>
-          <a href="" onClick={clickHandler} id={styles['action-btn']}><img src={menuDropped ? closeIcon : menuIcon} alt="menuIcon"/></a>
+          <button onClick={clickHandler} id={styles['action-btn']}><img src={menuDropped ? closeIcon : menuIcon} alt="menuIcon"/></button>
           <Container className={styles['drop-menu']}>
             <ul>
-              <li><a href=''>About</a></li>
-              <li><a href=''>Discover</a></li>
-              <li><a href=''>Get Started</a></li>
+              <li><a href='' onClick={clickHandler}>About</a></li>
+              <li><a href='' onClick={clickHandler}>Discover</a></li>
+              <li><a href='' onClick={clickHandler}>Get Started</a></li>
             </ul>
           </Container>
         </nav>

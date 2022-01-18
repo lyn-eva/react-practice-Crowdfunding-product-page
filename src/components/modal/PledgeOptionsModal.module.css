@@ -1,7 +1,6 @@
 .pledgeOptionsModal {
   position: absolute;
   background-color: var(--clr-white);
-  width: 90%;
   top: 6rem;
   left: 50%;
   transform: translateX(-50%);

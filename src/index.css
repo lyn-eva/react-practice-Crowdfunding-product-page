@@ -22,3 +22,6 @@ a {
 body {
   background-color: rgba(240, 240, 240, .4);
 }
+button:hover {
+  cursor: pointer;
+}

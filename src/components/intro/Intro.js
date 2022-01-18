@@ -1,11 +1,18 @@
-import React from "react";
+import { useState } from "react";
 import profileLogo from "../../assests/logo-mastercraft.svg";
 import bookmarkLogo from "../../assests/icon-bookmark.svg";
 import styles from "./Intro.module.css";
 import Container from "../UI/Container";
 import Button from "../UI/Button";
+import PledgeOptionsModal from "../modal/PledgeOptionsModal";
 
 function Intro() {
+  const [showOptionModal, setShowOptionModal] = useState(false);
+
+  const clickHandler = () => {
+    setShowOptionModal((prevState) => !prevState);
+  };
+
   return (
     <section>
       <Container className={styles.intro}>
@@ -17,12 +24,13 @@ function Intro() {
           A beautifylly handcrafted monitor stand to reduce neck and eye strain.
         </p>
         <div className={styles.actions}>
-          <Button type="button">Back this project</Button>
+          <Button onClick={clickHandler}>Back this project</Button>
           <button id={styles.bookmark} type="button">
             <img src={bookmarkLogo} alt="bookmark" />
           </button>
         </div>
       </Container>
+      {showOptionModal && <PledgeOptionsModal onClick={clickHandler} />}
     </section>
   );
 }
