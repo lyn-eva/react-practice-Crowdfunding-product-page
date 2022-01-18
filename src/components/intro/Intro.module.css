@@ -4,6 +4,7 @@
   transform: translateY(-3.5rem);
   padding: 0 1.3rem 2rem;
   box-sizing: border-box;
+  max-width: 800px;
 }
 .logo {
   transform: translateY(-1.8rem);
@@ -24,4 +25,25 @@ button {
   border: none;
   border-radius: 2rem;
   background-color: transparent;
+}
+@media (min-width: 666px) {
+  .intro {
+    padding: 2.2rem;
+    transform: translateY(-6rem);
+    animation: slide 1.2s ease-out;
+  }
+  @keyframes slide {
+    from {
+      transform: translateY(-21rem);
+    }
+    to{
+      transform: translateY(-6rem);
+    }
+  }
+  .logo {
+    margin-top: -2.5rem;
+  }
+  .logo img {
+    width: 4rem;
+  }
 }

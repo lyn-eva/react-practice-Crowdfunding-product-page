@@ -68,6 +68,7 @@
   }
   .drop-menu li:not(:first-of-type) {
     margin-left: 1.5rem;
+    border: none;
   }
   .drop-menu a {
     padding: 0;

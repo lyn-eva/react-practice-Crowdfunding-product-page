@@ -4,6 +4,7 @@
   padding: 2rem 1.5rem;
   box-sizing: border-box;
   transform: translateY(-1.5rem);
+  max-width: 800px;
 }
 .statistic p{
   margin-top: .4rem;
@@ -28,6 +29,30 @@
 .progress {
   background-color: var(--clr-moderate-cyan);
   height: 100%;
-  width: 80.9%;
+  width: 10%;
   border-radius: inherit;
+  transition: 500ms ease-in-out;
+}
+@media (min-width: 676px) {
+  .statistics {
+    padding: 2.2rem;
+    transform: translateY(-4.5rem);
+    animation: slide 1.2s ease-out;
+  }
+  @keyframes slide {
+    from {
+      transform: translateY(-19rem);
+    }
+    to{
+      transform: translateY(-4.5rem);
+    }
+  }
+  .statistic-ctr {
+    display: flex;
+  }
+  .statistics hr {
+    margin: 2rem 2rem;
+    width: 4rem;
+    transform: rotateZ(-90deg);
+  }
 }

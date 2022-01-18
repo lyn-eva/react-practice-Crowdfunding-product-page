@@ -20,7 +20,7 @@ input[type="radio"] {
   height: 1.5rem;
   position: absolute;
 }
-.header {
+.modalView .header {
   margin-left: 3rem;
 }
 .header p {
@@ -47,22 +47,31 @@ input[type="radio"] {
 .detail {/**/
   display: flex;
 }
-.logic {
+.logic hr, .logic label, .logic input, .modalView .reward-btn {
   display: none;
+}
+.card:focus-within .logic { /*outstanding move*/
+  display: block;
 }
 hr {/**/
   margin: 1.3rem 0 0 -1.7rem;
   width: calc(3.4rem + 100%);
 }
-input[type="number"], .reward-btn {
+.logic .reward-btn {
+  width: 100%;
+}
+input[type="number"], .modalView .reward-btn {
   width: 6rem;/**/
   padding: .7rem 0;
 }
 .logic form {/**/
   display: flex;
-  align-items: center;
-  padding-top: 1.3rem;
+  align-items: flex-start;
+  margin-top: 1.3rem;
   flex-direction: column;
+}
+.modalView .logic form {
+  align-items: center;
 }
 .logic .form-action {
   display: flex;
@@ -73,6 +82,13 @@ input[type="number"], .reward-btn {
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 1.5rem;
+}
+.logic .form-action {
+  width: 75%;
+}
+.modalView .form-action {
+  width: 100%;
+  justify-content: space-between;
 }
 input[type="number"] {/**/
   border-radius: 2rem;
@@ -89,41 +105,51 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-@media (min-width: 590px) {
-  input[type='radio'] {
+@media (min-width: 666px) {
+  .modalView input[type='radio'] {
     position: static;
   }
   .header {/**/
     display: flex;
-    margin-left: 0; /**/
-    /* outline: 1px solid red; */
+    
+  }.header p {
+    margin: 1px 0 0 auto;
   }
-  .header p {
-    margin: 1px 0 0 1rem;
+
+  .modalView .form-action {
+    justify-content: right;
+  }
+  .modalView .reward-btn {
+    width: 6rem;
+  }
+  .modalView .header {
+    margin-left: 0; 
+  }
+  .modalView .header p {
+    margin-left: 1rem;
     font-weight: 700;
     font-size: 1rem;
   }
-  .context {/**/
+  .detail {/**/
     position: relative;
   }
-  .context .amount {/**/
+  .modalView .context .amount {/**/
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
   }
-  .amount span {/**/
+  .modalView .amount span {/**/
     font-size: 1.1rem;
     vertical-align: initial;
   }
-  .pledge-card .logic {/**/
-    /* display: none; */
-  }
-  .logic form {
+  .modalView .logic form {
     flex-direction: row;
+    align-items: center;
   }
-  .logic label {
+  .modalView .logic label {
     margin-right: auto;
     margin-bottom: 0;
+    width: 100%;
   }
 }

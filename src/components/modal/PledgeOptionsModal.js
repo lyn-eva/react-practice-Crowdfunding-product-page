@@ -27,25 +27,29 @@ function PledgeOptionsModal(props) {
           </div>
           <ul>
             <PriceCard
+              className="modalView"
               enableRadio={true}
               itemName="Pledge with no reward"
               descr="Choose to support us without a reward if you simply believe in our project.As a backer, you will be signed up to receive product updates via email."
-            />
+              />
             <PriceCard
+              className="modalView"
               enableRadio={true}
               itemName="Bamboo Stand"
               restriction="Pledge $25 or more"
               descr="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list."
               amount="101"
-            />
+              />
             <PriceCard
+              className="modalView"
               enableRadio={true}
               itemName="Black Edition Stand"
               restriction="pledge $75 or more"
               descr="You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included"
               amount="64"
-            />
+              />
             <PriceCard
+              className="modalView"
               enableRadio={true}
               itemName="Mahogany Special Edition"
               restriction="Pledge $200 or more"

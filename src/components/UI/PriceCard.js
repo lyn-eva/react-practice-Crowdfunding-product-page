@@ -3,10 +3,10 @@ import Button from "./Button";
 
 function PriceCard(props) {
   return (
-    <li className={styles.card}>
+    <li className={`${styles.card} ${styles[props.className] || ''}`}>
       <div className={styles.detail}>
         {props.enableRadio && (
-          <input type="radio" name="select-pledge" value="sus" checked />
+          <input type="radio" name="select-pledge" value="sus"/>
         )}
         <div className={styles.context}>
           <div className={styles.header}>
