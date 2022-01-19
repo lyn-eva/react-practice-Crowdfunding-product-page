@@ -1,23 +1,34 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import styles from "./PriceCard.module.css";
 import Button from "./Button";
 import Context from "../store/Context";
-function PriceCard(props) {
-  const ctx = useContext(Context)
+import PledgeOptionsModal from "../modal/PledgeOptionsModal";
 
-  const submitHandler = e => {
+function PriceCard(props) {
+  const ctx = useContext(Context);
+  const [showOptionModal, setShowOptionModal] = useState(false);
+
+  const onContinue = () => {
+    setShowOptionModal((prevState) => !prevState);
+  };
+
+  const submitHandler = (e) => {
     e.preventDefault();
-    if (props.onConfirm) {//
+    if (props.onConfirm) {
       props.onConfirm();
+      ctx.updateItems(props.itemName);
       ctx.modalHandler();
+    } else {
+      onContinue();
+      window.scrollTo(0, 0);
     }
-  }
+  };
 
   return (
-    <li className={`${styles.card} ${styles[props.className] || ''}`}>
+    <li className={`${styles.card} ${styles[props.className] || ""}`}>
       <div className={styles.detail}>
         {props.enableRadio && (
-          <input type="radio" name="select-pledge" value="sus"/>
+          <input type="radio" name="select-pledge" value="sus" />
         )}
         <div className={styles.context}>
           <div className={styles.header}>
@@ -43,7 +54,8 @@ function PriceCard(props) {
             </Button>
           </div>
         </form>
-      </div>    
+      </div>
+      {showOptionModal && <PledgeOptionsModal onClick={onContinue} />}
     </li>
   );
 }

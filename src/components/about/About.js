@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styles from "./About.module.css";
 import Container from "../UI/Container";
 import PriceCard from "../UI/PriceCard";
-import Modal from "../modal/Modal";
+import Context from "../store/Context";
 
 function About() {
+  const ctx = useContext(Context);
 
   return (
     <section>
@@ -24,26 +25,23 @@ function About() {
         </p>
         <ul>
           <PriceCard
-            // submitHandler={}
             itemName="Bamboo Stand"
             restriction="Pledge $25 or more"
             descr="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list."
-            amount="101"
+            amount={ctx.bambooStand}
           />
-          <PriceCard 
-            // submitHandler={}
+          <PriceCard
             itemName="Black Edition Stand"
             restriction="pledge $75 or more"
             descr="You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included"
-            amount="64"
+            amount={ctx.blackEd}
           />
           <PriceCard
-            // submitHandler={}
             itemName="Mahogany Special Edition"
             restriction="Pledge $200 or more"
             descr="You get two Special Edition Mahogany stands, a Backer T0Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included"
-            amount="0"
-          />          
+            amount={'' + ctx.mahoganyEd}
+          />
         </ul>
       </Container>
     </section>

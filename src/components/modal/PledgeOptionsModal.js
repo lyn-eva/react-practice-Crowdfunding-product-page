@@ -16,7 +16,7 @@ function PledgeOptionsModal(props) {
       )}
       {createPortal(
         <Container className={styles.pledgeOptionsModal}>
-          <div className={styles.context}>
+          <div id="temp" className={styles.context}>
             <h2>Back this project</h2>
             <button type="button" onClick={props.onClick}>
               <img id={styles.close} src={closeIcon} alt="close" />
