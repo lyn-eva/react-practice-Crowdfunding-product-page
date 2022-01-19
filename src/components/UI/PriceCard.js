@@ -17,7 +17,7 @@ function PriceCard(props) {
     e.preventDefault();
     const inpVal = inputRef.current.value;
     if (props.onConfirm) {
-      if (inpVal < props.min) return;
+      if (+inpVal < props.min) return;
       props.onConfirm();
       ctx.updateItems(props.itemName, inpVal);
       ctx.modalHandler();

@@ -33,7 +33,7 @@
   border-radius: inherit;
   transition: 500ms ease-in-out;
 }
-@media (min-width: 676px) {
+@media (min-width: 666px) {
   .statistics {
     padding: 2.2rem;
     transform: translateY(-4.5rem);

@@ -18,24 +18,28 @@ const stateReducer = (state, action) => {
       return {
         ...state,
         total: state.total + +action.value, // + here convert from string to number
+        backer: state.backer + 1,
       };
     case "Bamboo Stand":
       return {
         ...state,
         bambooStand: state.bambooStand - 1,
         total: state.total + +action.value,
+        backer: state.backer + 1,
       };
     case "Black Edition Stand":
       return {
         ...state,
         blackEd: state.blackEd - 1,
         total: state.total + +action.value,
+        backer: state.backer + 1,
       };
     case "Mahogany Special Edition Stand":
       return {
         ...state,
         mahoganyEd: state.mahoganyEd - 1,
         total: state.total + +action.value,
+        backer: state.backer + 1,
       };
   }
 };

@@ -11,7 +11,7 @@ function Statistics() {
     setTimeout(() => {
       setBarLen(ctx.total/1000);
     }, 0);
-  }, [])
+  }, [ctx.total])
 
   return (
     <section>

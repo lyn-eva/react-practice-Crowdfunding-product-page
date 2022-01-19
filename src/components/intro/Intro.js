@@ -8,6 +8,11 @@ import PledgeOptionsModal from "../modal/PledgeOptionsModal";
 
 function Intro() {
   const [showOptionModal, setShowOptionModal] = useState(false);
+  const [bookmark, setBookmark] = useState(false);
+
+  const bookmarkHandler = () => {
+    setBookmark(prevState => !prevState);
+  }
 
   const clickHandler = () => {
     setShowOptionModal((prevState) => !prevState);
@@ -25,8 +30,9 @@ function Intro() {
         </p>
         <div className={styles.actions}>
           <Button onClick={clickHandler}>Back this project</Button>
-          <button id={styles.bookmark} type="button">
+          <button onClick={bookmarkHandler} id={styles.bookmark} type="button">
             <img src={bookmarkLogo} alt="bookmark" />
+            <span>{bookmark? 'bookmarked' : 'bookmark'}</span>
           </button>
         </div>
       </Container>
