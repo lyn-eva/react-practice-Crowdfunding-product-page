@@ -103,11 +103,11 @@ input[type="number"],
   justify-content: space-between;
 }
 input[type="number"] {
-  /**/
+  font-weight: 700;
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   box-sizing: border-box;
-  padding-left: 1rem;
+  padding-left: 1.2rem;
   border: 2px solid var(--clr-d-gray);
 }
 input[type="number"]:focus {

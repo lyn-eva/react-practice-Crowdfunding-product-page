@@ -13,47 +13,50 @@ const initial = {
 };
 
 const stateReducer = (state, action) => {
-  switch(action.type){
-    case 'Pledge with no reward':
+  switch (action.type) {
+    case "Pledge with no reward":
       return {
         ...state,
-        total: state.total
-      }
-    case 'Bamboo Stand':
+        total: state.total + +action.value, // + here convert from string to number
+      };
+    case "Bamboo Stand":
       return {
         ...state,
-        bambooStand: state.bambooStand - 1
-      }
-    case 'Black Edition Stand':
+        bambooStand: state.bambooStand - 1,
+        total: state.total + +action.value,
+      };
+    case "Black Edition Stand":
       return {
         ...state,
-        blackEd: state.blackEd - 1
-      }
-    case 'Mahogany Special Edition Stand':
+        blackEd: state.blackEd - 1,
+        total: state.total + +action.value,
+      };
+    case "Mahogany Special Edition Stand":
       return {
         ...state,
-        mahoganyEd: state.mahoganyEd - 1
-      }
+        mahoganyEd: state.mahoganyEd - 1,
+        total: state.total + +action.value,
+      };
   }
-}
+};
 
 function ContextProvider(props) {
-  const [state, dispatchState] = useReducer(stateReducer, initial)
+  const [state, dispatchState] = useReducer(stateReducer, initial);
   const [modalState, setModalState] = useState(false);
 
   const modalHandler = () => {
-    setModalState(prevState => !prevState);
-  }
-  const updateItems = (type) => {
-    dispatchState({type: type});
-  }
+    setModalState((prevState) => !prevState);
+  };
+  const updateItems = (type, value) => {
+    dispatchState({ type: type, value: value });
+  };
 
   const results = {
     ...state,
     showModal: modalState,
     modalHandler: modalHandler,
-    updateItems: updateItems
-  }
+    updateItems: updateItems,
+  };
 
   return <Context.Provider value={results}>{props.children}</Context.Provider>;
 }

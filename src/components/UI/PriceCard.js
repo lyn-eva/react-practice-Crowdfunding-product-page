@@ -6,6 +6,7 @@ import PledgeOptionsModal from "../modal/PledgeOptionsModal";
 
 function PriceCard(props) {
   const ctx = useContext(Context);
+  const inputRef = useRef();
   const [showOptionModal, setShowOptionModal] = useState(false);
 
   const onContinue = () => {
@@ -14,9 +15,11 @@ function PriceCard(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    const inpVal = inputRef.current.value;
     if (props.onConfirm) {
+      if (inpVal < props.min) return;
       props.onConfirm();
-      ctx.updateItems(props.itemName);
+      ctx.updateItems(props.itemName, inpVal);
       ctx.modalHandler();
     } else {
       onContinue();
@@ -48,7 +51,12 @@ function PriceCard(props) {
         <form onSubmit={submitHandler}>
           <label>Enter your pledge</label>
           <div className={styles["form-action"]}>
-            <input type="number" placeholder="$0.00" />
+            <input
+              ref={inputRef}
+              type="number"
+              min={props.min}
+              placeholder="$0.00"
+            />
             <Button type="submit" className={styles["reward-btn"]}>
               Continue
             </Button>
