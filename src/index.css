@@ -25,3 +25,8 @@ body {
 button:hover {
   cursor: pointer;
 }
+@media (min-width: 666px) {
+  :root {
+    --text-p : 18px;
+  }
+}

@@ -4,6 +4,10 @@
   box-shadow: 0 0 3px #aaa;
   padding: 1.7rem;
 }
+.disable {
+  opacity: 0.4;
+  pointer-events: none;
+}
 .card:focus-within {
   outline: 2px solid var(--clr-moderate-cyan);
 }
@@ -45,7 +49,6 @@ input[type="radio"] {
   margin-right: 5px;
 }
 .detail {
-  /**/
   display: flex;
 }
 .logic hr,
@@ -57,12 +60,10 @@ input[type="radio"] {
 .card.modalView:focus-within hr,
 .card.modalView:focus-within label,
 .card.modalView:focus-within input,
-.card.modalView:focus-within .reward-btn
-{
+.card.modalView:focus-within .reward-btn {
   display: block; /*@__@*/
 }
 hr {
-  /**/
   margin: 1.3rem 0 0 -1.7rem;
   width: calc(3.4rem + 100%);
 }
@@ -71,11 +72,10 @@ hr {
 }
 input[type="number"],
 .modalView .reward-btn {
-  width: 6rem; /**/
+  width: 6rem;
   padding: 0.7rem 0;
 }
 .logic form {
-  /**/
   display: flex;
   align-items: flex-start;
   margin-top: 1.3rem;
@@ -89,7 +89,6 @@ input[type="number"],
   gap: 1rem;
 }
 .logic label {
-  /**/
   color: var(--clr-d-gray);
   font-weight: 500;
   font-size: 14px;
@@ -110,8 +109,10 @@ input[type="number"] {
   padding-left: 1.2rem;
   border: 2px solid var(--clr-d-gray);
 }
+.modalView .error {
+  border-color: rgb(255, 119, 119);
+}
 input[type="number"]:focus {
-  /**/
   outline-color: var(--clr-moderate-cyan);
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -124,7 +125,6 @@ input[type="number"]::-webkit-outer-spin-button {
     position: static;
   }
   .header {
-    /**/
     display: flex;
   }
   .header p {
@@ -146,18 +146,15 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 1rem;
   }
   .detail {
-    /**/
     position: relative;
   }
   .modalView .context .amount {
-    /**/
     position: absolute;
     top: 0;
     right: 0;
     margin: 0;
   }
   .modalView .amount span {
-    /**/
     font-size: 1.1rem;
     vertical-align: initial;
   }

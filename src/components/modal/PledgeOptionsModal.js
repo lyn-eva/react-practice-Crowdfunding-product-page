@@ -18,8 +18,8 @@ function PledgeOptionsModal(props) {
         <Container className={styles.pledgeOptionsModal}>
           <div id="temp" className={styles.context}>
             <h2>Back this project</h2>
-            <button type="button" onClick={props.onClick}>
-              <img id={styles.close} src={closeIcon} alt="close" />
+            <button id={styles.close} type="button" onClick={props.onClick}>
+              <img src={closeIcon} alt="close" />
             </button>
             <p>
               Want to support us in bringing Mastercraft Bamboo Monitor Riser
@@ -33,7 +33,7 @@ function PledgeOptionsModal(props) {
               enableRadio={true}
               itemName="Pledge with no reward"
               descr="Choose to support us without a reward if you simply believe in our project.As a backer, you will be signed up to receive product updates via email."
-              min='0'
+              min='1'
               />
             <PriceCard
               onConfirm={props.onClick}

@@ -66,13 +66,29 @@
   .drop-menu ul {
     display: flex;
   }
+  .drop-menu li {
+    position: relative;
+  }
   .drop-menu li:not(:first-of-type) {
     margin-left: 1.5rem;
     border: none;
   }
+  .drop-menu li:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--clr-white);
+    transform: scaleX(0);
+    transform-origin: left top;
+    transition: 400ms;
+  }
+  .drop-menu li:hover:after {
+    transform: scaleX(1);
+  }
   .drop-menu a {
     padding: 0;
-    color: #fff;
+    color: var(--clr-white);
   }
 }
 

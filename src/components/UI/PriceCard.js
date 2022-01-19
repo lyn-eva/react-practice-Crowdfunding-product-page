@@ -8,16 +8,18 @@ function PriceCard(props) {
   const ctx = useContext(Context);
   const inputRef = useRef();
   const [showOptionModal, setShowOptionModal] = useState(false);
-
+  const [error, setError] = useState(false);
   const onContinue = () => {
     setShowOptionModal((prevState) => !prevState);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const inpVal = inputRef.current.value;
     if (props.onConfirm) {
-      if (+inpVal < props.min) return;
+      const inpVal = inputRef.current.value;
+      if (+inpVal < props.min) {
+        return setError(true);
+      }
       props.onConfirm();
       ctx.updateItems(props.itemName, inpVal);
       ctx.modalHandler();
@@ -28,7 +30,11 @@ function PriceCard(props) {
   };
 
   return (
-    <li className={`${styles.card} ${styles[props.className] || ""}`}>
+    <li
+      className={`${styles.card} ${styles[props.className] || ""} ${
+        props.amount == 0 ? styles.disable : ""
+      }`}
+    >
       <div className={styles.detail}>
         {props.enableRadio && (
           <input type="radio" name="select-pledge" value="sus" />
@@ -53,12 +59,21 @@ function PriceCard(props) {
           <div className={styles["form-action"]}>
             <input
               ref={inputRef}
+              className={error? styles.error : ''}
               type="number"
               min={props.min}
               placeholder="$0.00"
             />
-            <Button type="submit" className={styles["reward-btn"]}>
-              Continue
+            <Button
+              Disable={props.amount == 0 ? true : false}
+              type="submit"
+              className={styles["reward-btn"]}
+            >
+              {props.btnTxt
+                ? props.amount
+                  ? props.btnTxt
+                  : "Out of Stock"
+                : "Continue"}
             </Button>
           </div>
         </form>

@@ -29,18 +29,21 @@ function About() {
             restriction="Pledge $25 or more"
             descr="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list."
             amount={ctx.bambooStand}
+            btnTxt='Select Reward'
           />
           <PriceCard
             itemName="Black Edition Stand"
             restriction="pledge $75 or more"
             descr="You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included"
             amount={ctx.blackEd}
+            btnTxt='Select Reward'
           />
           <PriceCard
             itemName="Mahogany Special Edition"
             restriction="Pledge $200 or more"
             descr="You get two Special Edition Mahogany stands, a Backer T0Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included"
             amount={'' + ctx.mahoganyEd}
+            btnTxt='Select Reward'
           />
         </ul>
       </Container>
